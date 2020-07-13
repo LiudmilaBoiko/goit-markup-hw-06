@@ -59,8 +59,82 @@
       <div class="overlay">
         <section class="hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="button button-hero">Заказать услугу</a>
+          <a href="" class="button button-hero data-modal-open"
+            >Заказать услугу</a
+          >
         </section>
+      </div>
+
+      <div class="backdrop data-modal">
+        <div class="modal">
+          <p class="form-header">Оставьте свои данные, мы вам перезвоним</p>
+          <form action="">
+            <ul class="modal-form">
+              <li class="form-field">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-input"
+                  placeholder=" "
+                />
+                <label for="name" class="form-label">Имя</label>
+              </li>
+
+              <li class="form-field">
+                <input
+                  type="tel"
+                  name="telephone"
+                  class="form-input"
+                  id="telephone"
+                  placeholder=" "
+                />
+                <label for="telephone" class="form-label">Телефон</label>
+              </li>
+
+              <li class="form-field">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  id="email"
+                  placeholder=" "
+                />
+                <label for="email" class="form-label">Почта</label>
+              </li>
+
+              <li class="form-field">
+                <textarea
+                  name="comment"
+                  id="comment"
+                  cols="30"
+                  rows="10"
+                  class="form-comment"
+                  placeholder=" "
+                ></textarea>
+                <label for="comment" class="form-label comment"
+                  >Комментарий</label
+                >
+              </li>
+              <li class="form-field">
+                <input
+                  type="checkbox"
+                  name="agreement"
+                  value="agreement"
+                  id="agreement"
+                />
+                <label for="agreement"
+                  ><span>
+                    Соглашаюсь с рассылкой и принимаю
+                    <a href=""> Условия договора</a>
+                  </span></label
+                >
+              </li>
+            </ul>
+
+            <button type="submit" class="button">Отправить</button>
+          </form>
+        </div>
       </div>
 
       <!--Features-->
@@ -458,19 +532,28 @@
 
         <div class="subscription">
           <b class="footer-list-title">Подпишитесь на рассылку</b>
-          <div class="sub-field">
-            <a href="" class="e-mail">E-mail</a>
-            <a href="" class="button send"
-              >Подписаться
+
+          <form action="" class="sub-field">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="email"
+            />
+            <button type="submit" class="button send">
+              Подписаться
               <svg width="24" height="24" class="icon-send">
-                <use href="./img/sprite.svg#send"></use></svg
-            ></a>
-          </div>
+                <use href="./img/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
       <!-- <div class="container">
         <p class="copyright">2020 &verbar; Developed by GoIT Students</p>
       </div> -->
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

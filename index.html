@@ -67,6 +67,9 @@
 
       <div class="backdrop data-modal">
         <div class="modal">
+          <svg width="30px" height="30px" class="close">
+            <use href="./img/sprite.svg#close"
+          </svg>
           <p class="form-header">Оставьте свои данные, мы вам перезвоним</p>
           <form action="">
             <ul class="modal-form">
@@ -78,7 +81,12 @@
                   class="form-input"
                   placeholder=" "
                 />
-                <label for="name" class="form-label">Имя</label>
+                <label for="name" class="form-label">
+                  <svg width="18" height="18">
+                    <use href="./img/sprite.svg#person"></use>
+                  </svg>
+                  Имя</label
+                >
               </li>
 
               <li class="form-field">
@@ -89,7 +97,12 @@
                   id="telephone"
                   placeholder=" "
                 />
-                <label for="telephone" class="form-label">Телефон</label>
+                <label for="telephone" class="form-label">
+                  <svg width="18" height="18">
+                    <use href="./img/sprite.svg#phone"></use>
+                  </svg>
+                  Телефон</label
+                >
               </li>
 
               <li class="form-field">
@@ -100,7 +113,12 @@
                   id="email"
                   placeholder=" "
                 />
-                <label for="email" class="form-label">Почта</label>
+                <label for="email" class="form-label">
+                  <svg width="18" height="18">
+                    <use href="./img/sprite.svg#email"></use>
+                  </svg>
+                  Почта</label
+                >
               </li>
 
               <li class="form-field bottom">
@@ -118,13 +136,14 @@
               </li>
               <li class="form-field bottom">
                 <input
+                  class="checkbox"
                   type="checkbox"
                   name="agreement"
                   value="agreement"
                   id="agreement"
                 />
                 <label for="agreement" class="agreement"
-                  ><span>
+                  ><span class="agreement-text">
                     Соглашаюсь с рассылкой и принимаю
                     <a href="" class="modal-link"> Условия договора</a>
                   </span></label

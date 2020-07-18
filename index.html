@@ -59,17 +59,18 @@
       <div class="overlay">
         <section class="hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="button button-hero data-modal-open"
-            >Заказать услугу</a
-          >
+          <button data-modal-open class="button button-hero">
+            Заказать услугу
+          </button>
         </section>
       </div>
-
-      <div class="backdrop data-modal">
+      <!--модальное окно-->
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <svg width="30px" height="30px" class="close">
+          <svg width="30px" height="30px" class="close" data-modal-close>
             <use href="./img/sprite.svg#close"
           </svg>
+
           <p class="form-header">Оставьте свои данные, мы вам перезвоним</p>
           <form action="">
             <ul class="modal-form">
@@ -81,12 +82,11 @@
                   class="form-input"
                   placeholder=" "
                 />
-                <label for="name" class="form-label">
-                  <svg width="18" height="18">
-                    <use href="./img/sprite.svg#person"></use>
-                  </svg>
-                  Имя</label
-                >
+                <label for="name" class="form-label"> Имя</label>
+
+                <svg width="18" height="18" class="form-icon">
+                  <use href="./img/sprite.svg#person"></use>
+                </svg>
               </li>
 
               <li class="form-field">
@@ -97,12 +97,10 @@
                   id="telephone"
                   placeholder=" "
                 />
-                <label for="telephone" class="form-label">
-                  <svg width="18" height="18">
-                    <use href="./img/sprite.svg#phone"></use>
-                  </svg>
-                  Телефон</label
-                >
+                <label for="telephone" class="form-label"> Телефон</label>
+                <svg width="18" height="18" class="form-icon">
+                  <use href="./img/sprite.svg#phone"></use>
+                </svg>
               </li>
 
               <li class="form-field">
@@ -113,12 +111,10 @@
                   id="email"
                   placeholder=" "
                 />
-                <label for="email" class="form-label">
-                  <svg width="18" height="18">
-                    <use href="./img/sprite.svg#email"></use>
-                  </svg>
-                  Почта</label
-                >
+                <label for="email" class="form-label"> Почта</label>
+                <svg width="18" height="18" class="form-icon">
+                  <use href="./img/sprite.svg#email"></use>
+                </svg>
               </li>
 
               <li class="form-field bottom">
@@ -221,7 +217,7 @@
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list projects">
-            <li class="item">
+            <li class="item example">
               <a class="none" href="">
                 <img
                   class="img"
@@ -232,7 +228,7 @@
                 <p class="description">Десктопные приложения</p>
               </a>
             </li>
-            <li class="item">
+            <li class="item example">
               <a class="none" href="">
                 <img
                   class="img"
@@ -243,7 +239,7 @@
                 <p class="description">Мобильные приложения</p>
               </a>
             </li>
-            <li class="item">
+            <li class="item example">
               <a class="none" href="">
                 <img
                   class="img"

@@ -406,6 +406,7 @@
 
 .modal {
   position: absolute;
+  z-index: 5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -461,6 +462,7 @@
 .form-input {
   width: 100%;
   margin: 0;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -471,15 +473,27 @@
   top: 0;
   left: 0;
   transform: translate(42px, 12px);
-  fill: var(--title-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(16px, 11px);
+  fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover ~ .form-icon,
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
 }
 .form-comment {
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
+  padding: 16px 11px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -505,7 +519,8 @@
 .form-input:focus + .form-label,
 .form-comment:hover + .form-label,
 .form-comment:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-input:not(:placeholder-shown) + .form-label,
+.form-comment:not(:placeholder-shown) + .form-label {
   transform: translate(16px, -19px);
   color: var(--accent-color);
   fill: var(--accent-color);
@@ -533,6 +548,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(3px);
   content: "";
   display: inline-block;
   width: 16px;
@@ -613,6 +629,11 @@
 }
 
 /*чем мы занимаемся*/
+.item.example {
+  position: relative;
+  z-index: -1;
+}
+
 .projects {
   display: flex;
 }
